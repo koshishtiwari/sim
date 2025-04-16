@@ -28,11 +28,145 @@
   color: #61dafb;
 }
 
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Flex container for the main layout */
+.simulation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Adjust the stats panel */
+.stats-panel {
+  flex: 1;
+  background-color: #f4f4f4;
+  border-right: 2px solid #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stats-panel h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.stats-panel p, .stats-panel ul {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.stats-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stats-panel li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+  padding: 5px 0;
+}
+
+/* Adjust the simulation area */
+.simulation-area {
+  flex: 2;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid #000000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Button styles */
+button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Header styles */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Minimalist brutalist text styles */
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .simulation-container {
+    flex-direction: column;
+  }
+
+  .stats-panel {
+    border-right: none;
+    border-bottom: 2px solid #000000;
+  }
+
+  .simulation-area {
+    border-left: none;
   }
 }
